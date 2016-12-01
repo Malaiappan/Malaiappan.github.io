@@ -50,6 +50,7 @@
 	    
       <!-- Main Container Start-->
       <main>
+	      <div id="fcmtoken"></div>
       <div id="preload-div">
       <div id="preloader" > 
            <div class="preloader-wrapper small active">
@@ -450,7 +451,7 @@
 		console.log(token);
 		$(".custom__button").html(token);
 		fcmToken = token;
-		$("#home").text(fcmToken);
+		$("#fcmtoken").text(fcmToken);
 	})
 	.catch(function(err) {
 		console.log('Unable to get permission to notify. ', err);
