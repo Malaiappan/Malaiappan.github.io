@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 });
   
+navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
+.then(device => {
+  console.log(device.productName);      
+  console.log(device.manufacturerName);
+})
+.catch(error => { console.log(error); });
 document.getElementById("viewoffers").addEventListener('click', function() {
     getDataOnSubmit();
   });
